@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wordle Game</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+  </head>
+  <body>
+    <div class="grid">
+      <div class="row" id="row0">
+        <div class="box" value=0></div>
+        <div class="box" value=1></div>
+        <div class="box" value=2></div>
+        <div class="box" value=3></div>
+        <div class="box" value=4></div>
+      </div>
+      <div class="row" id="row1">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row" id="row2">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row" id="row3">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row" id="row4">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row" id="row5">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <form id="onSubmit" onsubmit="return false">
+        <input type="text" id="word-input" name="word-input" maxlength="5" placeholder="Enter a five letter word" autocomplete="off" autofocus="true">
+        <input type="submit" id="go-button" value="GO!">
+        <input type="button" id="again-button" value="New Game">
+      </form>
+      <div class="row">
+        <label class="error" id="lengthError">*Word must be five letters long.</label>
+        <label class="error" id="wordError">*Not a real word.</label>        
+      </div>
+      <div class="row">
+        <label class="letter" id="A">A</label>
+        <label class="letter" id="B">B</label>
+        <label class="letter" id="C">C</label>
+        <label class="letter" id="D">D</label>
+        <label class="letter" id="E">E</label>
+        <label class="letter" id="F">F</label>
+        <label class="letter" id="G">G</label>
+        <label class="letter" id="H">H</label>
+        <label class="letter" id="I">I</label>
+        <label class="letter" id="J">J</label>
+        <label class="letter" id="K">K</label>
+        <label class="letter" id="L">L</label>
+        <label class="letter" id="M">M</label>
+      </div>
+      <div class="row">
+        <label class="letter" id="N">N</label>
+        <label class="letter" id="O">O</label>
+        <label class="letter" id="P">P</label>
+        <label class="letter" id="Q">Q</label>
+        <label class="letter" id="R">R</label>
+        <label class="letter" id="S">S</label>
+        <label class="letter" id="T">T</label>
+        <label class="letter" id="U">U</label>
+        <label class="letter" id="V">V</label>
+        <label class="letter" id="W">W</label>
+        <label class="letter" id="X">X</label>
+        <label class="letter" id="Y">Y</label>
+        <label class="letter" id="Z">Z</label>
+      </div>
+    </div>    
+    <script src="web.js"></script>
+  </body>
+</html>
