@@ -95,8 +95,8 @@ goButton.addEventListener("click", function() {
           audio.play();
         }
 
-        // letter is not in the word
-        else{
+        // the letter is not in the word
+        if(boxes[i].style.backgroundColor != "yellow" && boxes[i].style.backgroundColor != "green"){
           boxes[i].style.backgroundColor = "grey";
           letter.style.color = "red";
           boxes[i].textContent = userWord[i];
@@ -144,3 +144,4 @@ function setNewGame(){
   againButton.style.display = "inline"
   lengthError.style.visibility = "visible";
 }
+
