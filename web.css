@@ -40,6 +40,10 @@ body{
   justify-content: center;
 }
 
+#onSubmit{
+  justify-items: center;
+  justify-content: center;
+}
 /* Text box to guess word*/
 #word-input {
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.285);
@@ -52,7 +56,7 @@ body{
 }
 
 #go-button {
-  position: absolute;
+  position: relative;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.265);
   padding: 0.5em 1em;
   margin: 0.5em;
@@ -65,7 +69,7 @@ body{
 }
 
 #again-button {
-  position: absolute;
+  position: relative;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.265);
   padding: 0.5em 1em;
   margin: 0.5em;
@@ -79,6 +83,7 @@ body{
 }
 
 .letter {
+  /* flex: 1; */
   font-weight: bold;
   width: 100%;
   font-size: 2em;
@@ -87,11 +92,80 @@ body{
   color: black;
 }
 
+.letCont{
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  margin-left: 10px;
+  margin-right: 10px;
+  /* gap: 10px;
+  grid-auto-rows: 100px; */
+}
+
 .error{
   position: absolute;
   visibility: hidden;
-  width: 100%;
+  /* width: 100%; */
   font-size: 1em;
-  margin: 0.1em;
+  /* margin: 0.1em; */
   color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .grid{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .box{
+    width: 45px;
+    height: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .letCont{
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .letter{
+    font-size: 1.5em;
+    padding: 0.03em;
+    margin: 0.1em;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .grid{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .box{
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 23px;
+  }
+
+  #word-input{
+    width: 190px;
+  }
+
+  .letCont{
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .letter{
+    font-size: 1.5em;
+    padding: 0.03em;
+    margin: 0.1em;
+  }
 }
